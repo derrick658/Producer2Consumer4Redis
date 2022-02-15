@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package struct;
+
+message key_incident {
+  string sip = 1;
+  string dip = 2;
+  int32 sport = 3;
+  int32 dport = 4;
+  string smac = 5;
+  string dmac = 6;
+  string proto = 7;
+  string app = 8;
+  string flow_time = 9;
+  string pkt_time = 10;
+}
