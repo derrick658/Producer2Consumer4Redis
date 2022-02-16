@@ -1,7 +1,15 @@
 # -*- coding: utf-8 -*-
 import time
 import random
+import unittest
+
 import incident_pb2
+
+"""
+Two execution methods:
+1. python -m unittest incident_struct_example
+2. python incident_struct_example.py
+"""
 
 
 class RandomData(object):
@@ -49,15 +57,42 @@ src_key_incident.flow_time = RandomData.random_datetime()
 src_key_incident.pkt_time = RandomData.random_datetime()
 
 print('=====================原始数据=======================')
-src_data = src_key_incident
-print(src_data)
+# print(src_key_incident)
 
 print('====================序列化数据=======================')
-dump_data = src_data.SerializeToString()
-print(dump_data)
+dump_data = src_key_incident.SerializeToString()
+# print(dump_data)
 
 print('====================反序列化数据======================')
 load_data = dst_key_incident.ParseFromString(dump_data)
-print(dst_key_incident)
-
+# print(dst_key_incident)
 assert src_key_incident == dst_key_incident
+
+
+class TestProtobuf(unittest.TestCase):
+    def setUp(self):
+        self.src_key_incident = incident_pb2.key_incident()
+        self.dst_key_incident = incident_pb2.key_incident()
+
+        self.src_key_incident.sip = RandomData.random_address()
+        self.src_key_incident.dip = RandomData.random_address()
+        self.src_key_incident.sport = RandomData.random_port()
+        self.src_key_incident.dport = RandomData.random_port()
+        self.src_key_incident.smac = RandomData.random_mac()
+        self.src_key_incident.dmac = RandomData.random_mac()
+        self.src_key_incident.proto = RandomData.random_protocol()
+        self.src_key_incident.app = RandomData.random_app()
+        self.src_key_incident.flow_time = RandomData.random_datetime()
+        self.src_key_incident.pkt_time = RandomData.random_datetime()
+
+    def test_serialization(self):
+        self.assertTrue(self.src_key_incident.SerializeToString())
+
+    def test_deserialization(self):
+        result = self.src_key_incident.SerializeToString()
+        self.dst_key_incident.ParseFromString(result)
+        self.assertEqual(self.dst_key_incident, self.src_key_incident)
+
+
+if __name__ == '__main__':
+    unittest.main()

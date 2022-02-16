@@ -17,9 +17,9 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='incident.proto',
-  package='struct',
-  syntax='proto3',
-  serialized_pb=_b('\n\x0eincident.proto\x12\x06struct\"\xa3\x01\n\x0ckey_incident\x12\x0b\n\x03sip\x18\x01 \x01(\t\x12\x0b\n\x03\x64ip\x18\x02 \x01(\t\x12\r\n\x05sport\x18\x03 \x01(\x05\x12\r\n\x05\x64port\x18\x04 \x01(\x05\x12\x0c\n\x04smac\x18\x05 \x01(\t\x12\x0c\n\x04\x64mac\x18\x06 \x01(\t\x12\r\n\x05proto\x18\x07 \x01(\t\x12\x0b\n\x03\x61pp\x18\x08 \x01(\t\x12\x11\n\tflow_time\x18\t \x01(\t\x12\x10\n\x08pkt_time\x18\n \x01(\tb\x06proto3')
+  package='',
+  syntax='proto2',
+  serialized_pb=_b('\n\x0eincident.proto\"\xa3\x01\n\x0ckey_incident\x12\x0b\n\x03sip\x18\x01 \x02(\t\x12\x0b\n\x03\x64ip\x18\x02 \x02(\t\x12\r\n\x05sport\x18\x03 \x02(\x05\x12\r\n\x05\x64port\x18\x04 \x02(\x05\x12\x0c\n\x04smac\x18\x05 \x02(\t\x12\x0c\n\x04\x64mac\x18\x06 \x02(\t\x12\r\n\x05proto\x18\x07 \x02(\t\x12\x0b\n\x03\x61pp\x18\x08 \x02(\t\x12\x11\n\tflow_time\x18\t \x02(\t\x12\x10\n\x08pkt_time\x18\n \x02(\t')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -28,77 +28,77 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _KEY_INCIDENT = _descriptor.Descriptor(
   name='key_incident',
-  full_name='struct.key_incident',
+  full_name='key_incident',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='sip', full_name='struct.key_incident.sip', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      name='sip', full_name='key_incident.sip', index=0,
+      number=1, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='dip', full_name='struct.key_incident.dip', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='dip', full_name='key_incident.dip', index=1,
+      number=2, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='sport', full_name='struct.key_incident.sport', index=2,
-      number=3, type=5, cpp_type=1, label=1,
+      name='sport', full_name='key_incident.sport', index=2,
+      number=3, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='dport', full_name='struct.key_incident.dport', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='dport', full_name='key_incident.dport', index=3,
+      number=4, type=5, cpp_type=1, label=2,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='smac', full_name='struct.key_incident.smac', index=4,
-      number=5, type=9, cpp_type=9, label=1,
+      name='smac', full_name='key_incident.smac', index=4,
+      number=5, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='dmac', full_name='struct.key_incident.dmac', index=5,
-      number=6, type=9, cpp_type=9, label=1,
+      name='dmac', full_name='key_incident.dmac', index=5,
+      number=6, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='proto', full_name='struct.key_incident.proto', index=6,
-      number=7, type=9, cpp_type=9, label=1,
+      name='proto', full_name='key_incident.proto', index=6,
+      number=7, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='app', full_name='struct.key_incident.app', index=7,
-      number=8, type=9, cpp_type=9, label=1,
+      name='app', full_name='key_incident.app', index=7,
+      number=8, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='flow_time', full_name='struct.key_incident.flow_time', index=8,
-      number=9, type=9, cpp_type=9, label=1,
+      name='flow_time', full_name='key_incident.flow_time', index=8,
+      number=9, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='pkt_time', full_name='struct.key_incident.pkt_time', index=9,
-      number=10, type=9, cpp_type=9, label=1,
+      name='pkt_time', full_name='key_incident.pkt_time', index=9,
+      number=10, type=9, cpp_type=9, label=2,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -111,12 +111,12 @@ _KEY_INCIDENT = _descriptor.Descriptor(
   ],
   options=None,
   is_extendable=False,
-  syntax='proto3',
+  syntax='proto2',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=27,
-  serialized_end=190,
+  serialized_start=19,
+  serialized_end=182,
 )
 
 DESCRIPTOR.message_types_by_name['key_incident'] = _KEY_INCIDENT
@@ -124,7 +124,7 @@ DESCRIPTOR.message_types_by_name['key_incident'] = _KEY_INCIDENT
 key_incident = _reflection.GeneratedProtocolMessageType('key_incident', (_message.Message,), dict(
   DESCRIPTOR = _KEY_INCIDENT,
   __module__ = 'incident_pb2'
-  # @@protoc_insertion_point(class_scope:struct.key_incident)
+  # @@protoc_insertion_point(class_scope:key_incident)
   ))
 _sym_db.RegisterMessage(key_incident)
 
