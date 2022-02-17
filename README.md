@@ -1,3 +1,8 @@
+# Producer2Consumer4Redis
+The C language is used as the producer and the Python language is used as the consumer, and the data is transmitted in one direction through the Redis message queue. For transfer performance, use ProtoBuf for serialization and deserialization of data.
+
+
+
 ## 编译
 
 ```bash
